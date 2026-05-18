@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | Change Your Look</title>
+    <link rel="stylesheet" href="css/appointment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contact-container"> 
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <h3>Book Your Visit</h3>
+            
+            <input type="text" placeholder="Full Name" name="Name" class="contact-inputs" required>
+            
+            <input type="tel" placeholder="Phone Number" name="Phone Number" class="contact-inputs" required>
+            
+            <input type="tel" placeholder="Alternative Phone Number (Optional)" name="Alt Phone Number" class="contact-inputs">
+            
+            <input type="email" placeholder="Enter Valid Email Address" name="Email" class="contact-inputs" required>
+            
+            <div class="date-wrapper">
+                <label for="Date">Preferred Date:</label>
+                <input type="date" id="Date" name="Date" class="contact-inputs date-input" required>
+            </div>
+            
+            <textarea name="Message" placeholder="Anything we need to know? (Styling requests, hair history, etc.)" class="contact-inputs"></textarea>
+            
+            <button type="submit">BOOK NOW</button>
+            <a href="index.html" class="back-link">Return to Home</a>
+        </form>
+    </div>
+</body>
+</html>

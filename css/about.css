@@ -1,0 +1,272 @@
+/* Core Setup & Main Page Color Scheme */
+:root {
+  --primary-pink: #e85e93;
+  --text-dark: #333;
+  --text-light: #fff;
+  --bg-light: #f9f9f9;
+  --bg-white: #ffffff;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Header */
+header {
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+  text-align: center;
+  padding: 40px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+header h1 {
+  font-family: "Forum", serif;
+  color: var(--primary-pink);
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+header h3 {
+  color: #777;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  flex-wrap: wrap; /* Allows safe stacking on mobile */
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px 5%;
+  background-color: var(--bg-white);
+  gap: 30px;
+}
+
+.about-text {
+  flex: 1 1 400px;
+  animation: fade-in-up 1.5s ease forwards;
+}
+
+.about-text h2 {
+  font-size: 35px;
+  color: var(--primary-pink);
+  margin-bottom: 20px;
+  font-family: "Forum", serif;
+}
+
+.about-text p {
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.about-image {
+  flex: 1 1 400px;
+  text-align: center;
+  animation: fade-in-right 1.5s ease forwards;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(232, 94, 147, 0.2); /* Soft pink shadow */
+}
+
+/* Animations */
+@keyframes fade-in-right {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Our Team Header */
+.team-header {
+  text-align: center;
+  padding: 50px 0 20px;
+}
+
+.team-header h1 {
+  font-family: "Forum", serif;
+  font-size: 45px;
+  color: var(--primary-pink);
+}
+
+/* Our Team Cards */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 5%;
+  margin-bottom: 20px;
+}
+
+.column {
+  flex: 1 1 300px;
+  max-width: 350px;
+  padding: 15px;
+}
+
+.card {
+  background-color: var(--bg-white);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%; /* Keeps cards uniform */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-bottom: 4px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(232, 94, 147, 0.2);
+  border-bottom: 4px solid var(--primary-pink);
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+.container h2 {
+  font-family: "Forum", serif;
+  margin-bottom: 5px;
+  color: var(--text-dark);
+}
+
+.title {
+  color: var(--primary-pink);
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.container p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Social Links styling to match main page */
+.social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  font-size: 18px;
+  line-height: 40px;
+  border: 1px solid var(--primary-pink);
+  color: var(--primary-pink);
+  border-radius: 5px;
+  margin: 0 5px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  background: var(--primary-pink);
+  color: var(--text-light);
+  transform: translateY(-3px);
+}
+
+/* Studio Data Grid (Strictly 2x2) */
+.containergrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* FORCES 2 COLUMNS */
+  gap: 20px;
+  padding: 60px 5%;
+  background-color: var(--primary-pink); /* Pink background block to tie it together */
+  max-width: 1200px;
+  margin: 40px auto 0;
+  border-radius: 15px 15px 0 0;
+}
+
+.itemgrid {
+  background-color: #000; /* Black borders inside the pink block */
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 16 / 9; /* Replaces padding hack, perfectly scales 2x2 */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.itemgrid video, 
+.itemgrid img, 
+.itemgrid iframe,
+.slideshow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+}
+
+/* Slideshow */
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Device Compatibility Overrides */
+@media screen and (max-width: 770px) {
+  .about-text, .about-image {
+    text-align: center;
+  }
+  
+  .column {
+    flex: 1 1 100%; /* Stacks the team cards on phones */
+  }
+  
+  /* Note: To maintain the strict 2x2 grid on mobile phones without breaking the 
+     page width, the aspect-ratio keeps the boxes perfect, but they will just be smaller. */
+  .containergrid {
+    padding: 30px 15px;
+    gap: 10px;
+  }
+}
