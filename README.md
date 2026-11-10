@@ -15,7 +15,7 @@ A multi-page website built for a modern hair studio. This project showcases fron
 * **External Libraries:** FontAwesome (icons).
 
 ## 🚀 Live Demo
-[Insert link to your live GitHub Pages site here, e.g., https://yourusername.github.io/change-your-look]
+https://change-your-look-hairstudio.netlify.app/
 
 ## 📧 Setting up the Booking Form
 
